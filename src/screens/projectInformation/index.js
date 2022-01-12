@@ -4,10 +4,10 @@ import styles from './style';
 
 import Header from '../../components/Header';
 
-import { TransparentImage } from '../../assets/images';
+import {InformationImage} from '../../assets/images';
 import DATA from './DATA';
 
-const ProjectInfo = () => {
+const ProjectInfo = ({navigation}) => {
   const renderItem = ({item}) => {
     return (
       <View style={styles.row}>
@@ -22,16 +22,26 @@ const ProjectInfo = () => {
 
   return (
     <View style={styles.container}>
-      <Header />
-      <Image source={TransparentImage} style={styles.image} resizeMode="contain" />
-      <View style={styles.footer}>
+      <View style={styles.topContainer}>
+        <Header
+          navigation={navigation}
+          screenName="HomeDashboard"
+          color="#fff"
+        />
+        <Image
+          source={InformationImage}
+          style={styles.image}
+          resizeMode="contain"
+        />
+      </View>
+      <View style={styles.bottomContainer}>
         <Text style={styles.footerTitle}>Projects Information</Text>
-
         <FlatList
           data={DATA}
           renderItem={renderItem}
-          contentContainerStyle={{ flexGrow: 1}}
+          contentContainerStyle={{flexGrow: 1}}
           keyExtractor={(item, index) => index}
+          showsVerticalScrollIndicator={false}
         />
       </View>
     </View>
