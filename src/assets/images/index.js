@@ -1,0 +1,25 @@
+export const SplashBackground = require('./background.png');
+export const TransparentRectangle = require('./rectangle.png');
+export const DocumentImage = require('./doc.png'); 
+export const ContactTopImage = require('./img4.png'); 
+export const ConstructionImage = require('./cnstruction.png'); 
+export const TransparentImage = require('./aba.png');
+export const LargeLogo = require('./logo.png');
+export const SmallLogo = require('./logoBW.png');
+export const NewProjectImage = require('./construction_img.png');
+
+export const OrganizationIcon = require('./icon/building.png'); 
+export const ScannerIcon = require('./icon/scanner.png'); 
+export const GlobeIcon = require('./icon/globe.png'); 
+export const DisciplineIcon = require('./icon/discipline.png'); 
+export const DownArrowIcon = require('./icon/down_arrow.png'); 
+export const PlusIcon = require('./icon/plusIcon.png'); 
+export const MinusIcon = require('./icon/minusIcon.png'); 
+export const DotIcon = require('./icon/dot.png'); 
+export const SelectIcon = require('./icon/select.png'); 
+export const EmailIcon = require('./emailIcon.png'); 
+export const ProjectNameIcon = require('./icon/p_icon_1.png'); 
+export const ProjectAddIcon = require('./icon/p_icon_2.png'); 
+export const ProjectValueIcon = require('./icon/p_icon_3.png'); 
+export const ProjectImageIcon = require('./icon/p_icon_4.png'); 
+export const ProjectTimeIcon = require('./icon/p_icon_5.png'); 
