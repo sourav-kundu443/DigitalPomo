@@ -10,6 +10,7 @@ const SearchBar = ({
   color,
   borderColor,
   borderBottomColor,
+  placeholderTextColor,
 }) => {
   return (
     <View style={styles.container}>
@@ -26,6 +27,7 @@ const SearchBar = ({
         <Icon name="search" color="#8C8C8C" size={20} />
         <TextInput
           placeholder={placeholder}
+          placeholderTextColor={placeholderTextColor}
           style={[styles.textInput, {color: color}]}
         />
       </View>

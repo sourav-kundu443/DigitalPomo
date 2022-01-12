@@ -63,6 +63,7 @@ const Contacts = ({navigation}) => {
         <View style={styles.searchBarView}>
           <SearchBar
             placeholder="Search for project"
+            placeholderTextColor="#fff"
             backgroundColor="#000"
             color="#fff"
             borderBottomColor="#fff"
