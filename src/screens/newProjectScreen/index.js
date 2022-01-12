@@ -24,7 +24,65 @@ import CustomButton from '../../components/CustomButton';
 const NewProject = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Header navigation={navigation} screenName='Home' color="#fff" />
+      <View style={styles.topContainer}>
+        <Header navigation={navigation} screenName="Home" color="#fff" />
+        <Image
+          source={NewProjectImage}
+          resizeMode="contain"
+          style={styles.constructionImage}
+        />
+      </View>
+      <View style={styles.bottomContainer}>
+        <Text style={styles.heading}>Create new project</Text>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View>
+            <View style={styles.formField}>
+              <Image source={ProjectNameIcon} style={styles.icon} />
+              <TextInput placeholder="Project name" style={styles.textInput} />
+            </View>
+            <View style={styles.formField}>
+              <Image source={ProjectAddIcon} style={styles.icon} />
+              <TextInput
+                placeholder="Project address"
+                style={styles.textInput}
+              />
+            </View>
+            <View style={styles.formField}>
+              <Image source={ProjectValueIcon} style={styles.icon} />
+              <TextInput placeholder="Project value" style={styles.textInput} />
+            </View>
+            <View style={styles.formField}>
+              <Image source={ProjectImageIcon} style={styles.icon} />
+              <TextInput placeholder="Project image" style={styles.textInput} />
+            </View>
+            <View style={styles.formField}>
+              <Image source={ProjectTimeIcon} style={styles.icon} />
+              <TextInput
+                placeholder="Project start date"
+                style={styles.textInput}
+              />
+            </View>
+            <View style={styles.formField}>
+              <Image source={ProjectTimeIcon} style={styles.icon} />
+              <TextInput
+                placeholder="Project end date"
+                style={styles.textInput}
+              />
+            </View>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('HomeDashboard')}>
+              <CustomButton
+                title="Continue"
+                color="#F17400"
+                paddingHorizontal={12}
+                marginVertical={30}
+                paddingVertical={15}
+              />
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </View>
+      {/* <Header navigation={navigation} screenName='Home' color="#fff" />
       <Image
         source={NewProjectImage}
         resizeMode="contain"
@@ -75,7 +133,7 @@ const NewProject = ({navigation}) => {
             />
           </TouchableOpacity>
         </View>
-      </ScrollView>
+      </ScrollView> */}
     </View>
   );
 };

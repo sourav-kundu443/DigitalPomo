@@ -2,35 +2,37 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: '#000',
-    position: 'relative',
+  },
+  topContainer: {
+    width: '100%',
+    height: '35%',
+    // backgroundColor: 'red',
+  },
+  bottomContainer: {
+    width: '100%',
+    height: '65%',
+    backgroundColor: '#fff',
+    borderTopRightRadius: 35,
+    borderTopLeftRadius: 35,
+    paddingHorizontal: '5%',
   },
   constructionImage: {
-    position: 'absolute',
     alignSelf: 'center',
-    top: '4%',
   },
-  footer: {
-    width: '100%',
-    top: '15%',
-    backgroundColor: '#fff',
-    height: '100%',
-    borderTopStartRadius: 25,
-    borderTopEndRadius: 25,
-    paddingHorizontal: '5%',
-    borderTopLeftRadius: 25,
-    borderTopRightRadius: 25,
-  },
+
   heading: {
     fontSize: 24,
     color: '#191919',
     fontWeight: '700',
     letterSpacing: 1,
     lineHeight: 30,
-    marginTop: '8%',
-    marginBottom: '4%',
-    paddingHorizontal: '7%',
+    marginVertical: '3%',
+    paddingHorizontal: '6%',
   },
   formField: {
     flexDirection: 'row',
@@ -57,9 +59,6 @@ const styles = StyleSheet.create({
     width: 25,
     resizeMode: 'stretch',
     alignItems: 'center',
-  },
-  btn: {
-    marginBottom: '25%',
   },
 });
 
