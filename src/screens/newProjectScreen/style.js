@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     lineHeight: 30,
     marginTop: '8%',
     marginBottom: '4%',
-    paddingHorizontal: '7%'
+    paddingHorizontal: '7%',
   },
   formField: {
     flexDirection: 'row',
@@ -40,15 +40,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 10,
     paddingHorizontal: 10,
-
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 6,
-    },
-    shadowOpacity: 0.39,
-    shadowRadius: 8.3,
-    elevation: 13,
+    borderWidth: 2,
+    borderColor: '#CCCCCC',
   },
   textInput: {
     width: '100%',
@@ -66,8 +59,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   btn: {
-      marginBottom: '25%'
-  }
+    marginBottom: '25%',
+  },
 });
 
 export default styles;
