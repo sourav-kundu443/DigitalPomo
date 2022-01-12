@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
   topContainer: {
     width: '100%',
     height: '35%',
-    // backgroundColor: 'red',
   },
   bottomContainer: {
     width: '100%',

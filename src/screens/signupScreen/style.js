@@ -2,15 +2,27 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: '#000000',
-    position: 'relative',
   },
-  topPart: {
-    flex: 1,
+  topContainer: {
+    width: '100%',
+    height: '30%',
+    alignItems: 'center',
+  },
+  bottomContainer: {
+    width: '100%',
+    height: '70%',
+    alignItems: 'center',
+    borderTopRightRadius: 35,
+    borderTopLeftRadius: 35,
+    backgroundColor: '#fff',
+    paddingHorizontal: '5%',
   },
   logo: {
-    position: 'absolute',
     width: '8%',
     height: '5%',
     top: '3%',
@@ -40,26 +52,16 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
     marginBottom: '6%',
   },
-  signUpForm: {
-    paddingHorizontal: 30,
-  },
   formField: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#fff',
     height: 55,
     borderRadius: 5,
-    margin: 10,
     paddingHorizontal: 10,
-
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 6,
-    },
-    shadowOpacity: 0.39,
-    shadowRadius: 8.3,
-    elevation: 13,
+    borderWidth: 2,
+    borderColor: '#cccccc',
+    marginVertical: '2%',
   },
   textInput: {
     width: '100%',
@@ -72,9 +74,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: '90%',
   },
-  btn: {
-    marginBottom: '35%'
-  }
 });
 
 export default styles;
