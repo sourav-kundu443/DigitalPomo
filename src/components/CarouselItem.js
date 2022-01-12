@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Image,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  ImageBackground,
-} from 'react-native';
+import {View, Image, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {WIDTH} from '../constants';
 
 import GreenTrans from '../assets/images/Rectangle4.png';

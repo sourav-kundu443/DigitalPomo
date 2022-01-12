@@ -1,5 +1,5 @@
-import React from 'react';
-import {View, FlatList} from 'react-native';
+import React, {useState, useRef} from 'react';
+import {View, FlatList, Animated} from 'react-native';
 
 import CarouselItem from './CarouselItem';
 

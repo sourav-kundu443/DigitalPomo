@@ -12,7 +12,6 @@ import styles from './style';
 import Header from '../../components/Header';
 
 import Office from '../../assets/images/office.png';
-import infoIcon from '../../assets/images/icon/infoIcon.png';
 
 import DATA from './DATA';
 
@@ -39,14 +38,18 @@ const HomeDashboard = ({navigation}) => {
     return (
       <View style={styles.card}>
         <TouchableOpacity
-          style={{alignItems: 'center'}}
+          style={[styles.cardBody, {alignItems: 'center'}]}
           onPress={() => navigation.navigate(item.name)}>
-          <Image
-            source={item.image}
-            style={styles.cardIcon}
-            resizeMode="cover"
-          />
-          <Text style={styles.cardText}>{item.text}</Text>
+          <View style={styles.imageView}>
+            <Image
+              source={item.image}
+              style={styles.cardIcon}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.textView}>
+            <Text style={styles.cardText}>{item.text}</Text>
+          </View>
         </TouchableOpacity>
       </View>
     );
@@ -54,21 +57,22 @@ const HomeDashboard = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Header navigation={navigation} screenName='NewProject' color="#fff" />
-      <View style={styles.imageContainer}>
-        <Image source={Office} style={styles.image} />
-      </View>
-      <View style={styles.footer}>
-        <Text style={styles.text}>Multi-storey Residential Building(G+12)</Text>
-        <View style={styles.cardContainer}>
-          <FlatList
-            data={formatData(DATA, numColumns)}
-            renderItem={renderItem}
-            // contentContainerStyle={{justifyContent: 'center', flexGrow: 1}}
-            numColumns={numColumns}
-            keyExtractor={(item, index) => index}
-          />
+      <View style={styles.topContainer}>
+        <Header navigation={navigation} screenName="NewProject" color="#fff" />
+        <View style={styles.imageContainer}>
+          <Image source={Office} style={styles.image} />
         </View>
+      </View>
+      <View style={styles.bottomContainer}>
+        <Text style={styles.text}>Multi-storey Residential Building(G+12)</Text>
+
+        <FlatList
+          data={formatData(DATA, numColumns)}
+          renderItem={renderItem}
+          numColumns={numColumns}
+          keyExtractor={(item, index) => index}
+          showsVerticalScrollIndicator={false}
+        />
       </View>
     </View>
   );

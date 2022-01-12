@@ -1,71 +1,80 @@
-import { StyleSheet, Dimensions } from "react-native";
-
-const numColumns = 3;
+import {StyleSheet, Dimensions} from 'react-native';
+// import WIDTH from '../../constants';
 const WIDTH = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#000',
-    },
-    imageContainer: {
-        alignItems: 'center'
-    },
-    image: {
-        width: 300,
-        height: 200
-    },
-    footer: {
-        backgroundColor: '#fff',
-        height: '100%',
-        marginTop: '7%',
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        
-    },
-    text: {
-        textTransform: 'uppercase',
-        fontSize: 15,
-        color: '#333333',
-        fontWeight: '500',
-        paddingHorizontal: '2%',
-        marginTop: '6%',
-        letterSpacing: 1
-    },
-    cardContainer: {
-        width: WIDTH,
-        height: '100%',
-        // justifyContent: 'center',
-        marginVertical: '5%',
-        paddingHorizontal: '3%'
-    },
-    card: {
-        // flex: 1,
-        height:120,
-        width:"30%",
-        flexDirection:'column',
-        alignItems: 'center',
-        backgroundColor:"white",
-        borderRadius:15,
-        padding: 10,
-        elevation:13,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 3 },
-        shadowOpacity: 0.5,
-        shadowRadius: 6,
-        marginVertical: '3%',
-        marginHorizontal: '1.5%'
-    },
-    cardText: {
-        textAlign: 'center',
-        fontSize: 14,  
-        color: '#565656',
-        fontWeight: '600',
-        letterSpacing: 1,
-    },
-    itemInvisible: {
-        backgroundColor: 'transparent'
-    },
-})
+  container: {
+    width: WIDTH,
+    height: '100%',
+    alignItems: 'center',
+    backgroundColor: '#000',
+  },
+  topContainer: {
+    width: '100%',
+    height: '40%',
+    alignItems: 'center',
+  },
+  bottomContainer: {
+    width: '100%',
+    height: '60%',
+    backgroundColor: '#fff',
+    borderTopRightRadius: 35,
+    borderTopLeftRadius: 35,
+    // paddingHorizontal: '2%',
+    alignItems: 'center',
+  },
+  imageContainer: {
+    height: '80%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: {
+    width: 280,
+    height: 180,
+  },
+
+  text: {
+    textTransform: 'uppercase',
+    fontSize: 15,
+    color: '#333333',
+    fontWeight: '500',
+    paddingHorizontal: '2%',
+    marginVertical: '6%',
+  },
+  card: {
+    alignItems: 'center',
+    paddingHorizontal: '2%',
+    paddingVertical: '4%',
+  },
+  cardBody: {
+    width: WIDTH / 3.5,
+    height: WIDTH / 3.5,
+    backgroundColor: '#fff',
+    borderRadius: 15,
+    paddingVertical: '5%',
+    elevation: 13,
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 3},
+    shadowOpacity: 0.5,
+    shadowRadius: 6,
+  },
+  imageView: {
+    height: '50%',
+  },
+  textView: {
+    height: '50%',
+    justifyContent: 'center',
+  },
+  cardText: {
+    textAlign: 'center',
+    fontSize: 14,
+    color: '#565656',
+    fontWeight: '600',
+    letterSpacing: 1,
+  },
+  itemInvisible: {
+    backgroundColor: 'transparent',
+  },
+});
 
 export default styles;
