@@ -44,7 +44,13 @@ const HomeScreen = ({navigation}) => {
               />
             </TouchableOpacity>
           </View>
-          <SearchBar />
+          <SearchBar
+            placeholder="Search for project"
+            backgroundColor="#e5e5e5"
+            color="#fff"
+            borderColor="#5F766B"
+            style={styles.searchBar}
+          />
         </View>
         <FlatList
           data={DATA}
