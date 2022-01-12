@@ -37,54 +37,34 @@ const styles = StyleSheet.create({
     lineHeight: 30,
     marginTop: '3%',
   },
-  formField: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  card: {
     backgroundColor: '#fff',
-    width: WIDTH / 1.13,
-    height: WIDTH / 5,
-    borderRadius: 5,
-    margin: 10,
-    paddingHorizontal: 10,
-    paddingVertical: 10,
-
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 6,
-    },
-    shadowOpacity: 0.5,
-    shadowRadius: 15,
-    elevation: 8,
-  },
-  textTitle: {
-    paddingLeft: 10,
-    fontSize: 18,
-    color: '#191919',
-  },
-  text: {
     width: '100%',
-    paddingLeft: 10,
-    fontSize: 14,
-    color: '#5B5B5B',
-  },
-  icon: {
+    marginTop: '5%',
+    borderRadius: 10,
     padding: 10,
-    margin: 5,
-    height: WIDTH / 12,
-    width: WIDTH / 12,
-    resizeMode: 'stretch',
-    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#CCCCCC',
   },
-  discipline: {
-    width: '80%',
+  cardRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
   },
-  downArrowIcon: {
-    height: WIDTH / 15,
-    width: WIDTH / 15,
+  textView: {
+    flexDirection: 'row',
+  },
+  marginText: {
+    marginLeft: '3%',
+  },
+  textName: {
+    fontWeight: 'bold',
+    color: '#191919',
+    fontSize: 16,
+    marginRight: '4%',
+  },
+  textCommon: {
+    color: '#5B5B5B',
+    fontSize: 14,
   },
 });
 
