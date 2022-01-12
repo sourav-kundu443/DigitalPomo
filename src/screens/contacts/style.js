@@ -16,13 +16,12 @@ const styles = StyleSheet.create({
     // backgroundColor: 'red',
   },
   searchBarView: {
-    // backgroundColor: 'yellow',
+    // backgroundColor: 'blue',
     width: '80%',
-    height: '100%',
-  },
-  searchBar: {
+    height: '70%',
     justifyContent: 'flex-end',
   },
+  searchBar: {},
   bottomContainer: {
     width: WIDTH,
     height: '65%',
