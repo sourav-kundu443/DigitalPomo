@@ -10,7 +10,7 @@ import ProjectInformation from '../screens/projectInformation';
 import ProjectMilestones from '../screens/timeline';
 import Contacts from '../screens/contacts';
 import Models from '../screens/dModels';
-import PhotosScreen from '../screens/homeScreens/PhotosScreen';
+import PhotosScreen from '../screens/photosScreen';
 import DocumentScreen from '../screens/homeScreens/DocumentsScreen';
 
 const Stack = createStackNavigator();
@@ -88,8 +88,6 @@ const ProfileStackScreen = () => {
     </View>
   );
 };
-
-
 
 export {
   HomeStackScreen,

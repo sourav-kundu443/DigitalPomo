@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '700',
     letterSpacing: 1,
-    lineHeight: 30,
+    lineHeight: 25,
   },
 });
 

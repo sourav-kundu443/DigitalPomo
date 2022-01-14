@@ -11,7 +11,6 @@ import Header from '../../components/Header';
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('sourav@gmail.com');
   const [message, setMessage] = useState('');
-  // const [token, setToken] = useState(null);
   const [secureTextEntry, setSecureTextEntry] = useState(true);
 
   const onSubmit = async () => {
