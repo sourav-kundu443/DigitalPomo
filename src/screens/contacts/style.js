@@ -28,15 +28,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
   },
-  titleText: {
-    position: 'absolute',
-    fontSize: 24,
-    color: '#fff',
-    fontWeight: '700',
-    letterSpacing: 1,
-    lineHeight: 30,
-    marginTop: '3%',
-  },
   card: {
     backgroundColor: '#fff',
     width: '100%',

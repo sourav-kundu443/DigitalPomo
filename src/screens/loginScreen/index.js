@@ -1,22 +1,22 @@
-import React from 'react';
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  TextInput,
-} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 import styles from './style';
-import { EmailIcon} from '../../assets/images';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import {EmailIcon} from '../../assets/images';
 
 import CustomButton from '../../components/CustomButton';
 import Header from '../../components/Header';
 
 const LoginScreen = ({navigation}) => {
+  const [secureTextEntry, setSecureTextEntry] = useState(true);
   return (
     <View style={styles.container}>
       <View style={styles.topPart}>
-        <Header screenName="SplashScreen" navigation={navigation} color='#fff' />
+        <Header
+          screenName="SplashScreen"
+          navigation={navigation}
+          color="#fff"
+        />
         <View style={styles.TtextContainer}>
           <Text style={styles.welcomeText}>Welcome to Demo!</Text>
           <Text style={styles.paraText}>
@@ -28,12 +28,30 @@ const LoginScreen = ({navigation}) => {
       <View style={styles.formContainer}>
         <View style={styles.loginForm}>
           <View style={styles.formField}>
-            <TextInput placeholder="Your Email" style={styles.textInput} />
+            <TextInput
+              placeholder="Your Email"
+              style={styles.textInput}
+              secureTextEntry={false}
+            />
             <Image source={EmailIcon} style={styles.icon} />
           </View>
           <View style={styles.formField}>
-            <TextInput placeholder="Password" style={styles.textInput} />
-            <Image source={EmailIcon} style={styles.icon} />
+            <TextInput
+              placeholder="Password"
+              style={styles.textInput}
+              secureTextEntry={secureTextEntry}
+            />
+            <TouchableOpacity
+              style={styles.icon}
+              onPress={() => {
+                setSecureTextEntry(prev => !prev);
+              }}>
+              {secureTextEntry ? (
+                <Icon name="eye-slash" size={25} style={{color: '#000'}} />
+              ) : (
+                <Icon name="eye" size={25} style={{color: '#000'}} />
+              )}
+            </TouchableOpacity>
           </View>
           <TouchableOpacity
             style={styles.forgotPassword}

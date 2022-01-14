@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 import {SmallLogo} from '../assets/images';
 
-const Header = ({navigation, screenName, color, text}) => {
+const Header = ({navigation, screenName, color, text, middleText}) => {
   return (
     <View style={styles.header}>
       <TouchableOpacity onPress={() => navigation.navigate(screenName)}>
@@ -14,6 +14,7 @@ const Header = ({navigation, screenName, color, text}) => {
           <Icon name="chevron-left" color={color} size={15} />
         )}
       </TouchableOpacity>
+      <Text style={styles.middleText}>{middleText}</Text>
       <Image source={SmallLogo} />
     </View>
   );
@@ -33,6 +34,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
     letterSpacing: 1,
+  },
+  middleText: {
+    fontSize: 24,
+    color: '#fff',
+    fontWeight: '700',
+    letterSpacing: 1,
+    lineHeight: 30,
   },
 });
 

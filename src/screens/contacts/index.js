@@ -87,8 +87,9 @@ const Contacts = ({navigation}) => {
           navigation={navigation}
           screenName="HomeDashboard"
           color="#fff"
+          middleText="Contacts"
         />
-        <Text style={styles.titleText}>Contacts</Text>
+
         <View style={styles.searchBarView}>
           <SearchBar
             placeholder="Search for project"

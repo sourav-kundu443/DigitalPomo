@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import styles from './style';
 import User from '../../assets/images/user.png';
-import Logo from '../../assets/images/logo.png';
 import UserIcon from '../../assets/images/userIcon.png';
 import EmailIcon from '../../assets/images/emailIcon.png';
 import MobileIcon from '../../assets/images/mobileIcon.png';
@@ -30,7 +29,7 @@ const SignUpScreen = ({navigation}) => {
       </View>
       <View style={styles.bottomContainer}>
         <Text style={styles.signUpText}>Sign Up</Text>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.formField}>
             <TextInput placeholder="Name" style={styles.textInput} />
             <Image source={UserIcon} style={styles.icon} />
