@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -7,6 +7,7 @@ import {
   TextInput,
   ScrollView,
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './style';
 import User from '../../assets/images/user.png';
 import UserIcon from '../../assets/images/userIcon.png';
@@ -21,6 +22,17 @@ import CustomButton from '../../components/CustomButton';
 import Header from '../../components/Header';
 
 const SignUpScreen = ({navigation}) => {
+  const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('1234');
+  // const [token, setToken] = useState(null);
+  const onSubmit = async () => {
+    try {
+      await AsyncStorage.setItem('token', email);
+      navigation.navigate('LoginScreen');
+    } catch (er) {
+      console.log(er);
+    }
+  };
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
@@ -35,7 +47,13 @@ const SignUpScreen = ({navigation}) => {
             <Image source={UserIcon} style={styles.icon} />
           </View>
           <View style={styles.formField}>
-            <TextInput placeholder="Your Email" style={styles.textInput} />
+            <TextInput
+              placeholder="Your Email"
+              style={styles.textInput}
+              onChangeText={value => {
+                setEmail(value);
+              }}
+            />
             <Image source={EmailIcon} style={styles.icon} />
           </View>
           <View style={styles.formField}>
@@ -58,9 +76,7 @@ const SignUpScreen = ({navigation}) => {
             <TextInput placeholder="City" style={styles.textInput} />
             <Image source={CityIcon} style={styles.icon} />
           </View>
-          <TouchableOpacity
-            style={styles.btn}
-            onPress={() => navigation.navigate('VerificationScreen')}>
+          <TouchableOpacity style={styles.btn} onPress={onSubmit}>
             <CustomButton
               title="Continue"
               color="#F17400"

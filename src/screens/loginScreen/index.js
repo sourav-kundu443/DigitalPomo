@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './style';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {EmailIcon} from '../../assets/images';
@@ -8,7 +9,21 @@ import CustomButton from '../../components/CustomButton';
 import Header from '../../components/Header';
 
 const LoginScreen = ({navigation}) => {
+  const [email, setEmail] = useState('sourav@gmail.com');
+  const [message, setMessage] = useState('');
+  // const [token, setToken] = useState(null);
   const [secureTextEntry, setSecureTextEntry] = useState(true);
+
+  const onSubmit = async () => {
+    const emailValue = await AsyncStorage.getItem('token');
+    if (emailValue == email) {
+      navigation.navigate('HomeScreen');
+      setMessage('');
+    } else {
+      setMessage('Entered email is not valid.');
+    }
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.topPart}>
@@ -32,14 +47,21 @@ const LoginScreen = ({navigation}) => {
               placeholder="Your Email"
               style={styles.textInput}
               secureTextEntry={false}
+              onChangeText={value => {
+                setEmail(value);
+              }}
             />
             <Image source={EmailIcon} style={styles.icon} />
           </View>
+
           <View style={styles.formField}>
             <TextInput
               placeholder="Password"
               style={styles.textInput}
               secureTextEntry={secureTextEntry}
+              onChangeText={value => {
+                setPassword(value);
+              }}
             />
             <TouchableOpacity
               style={styles.icon}
@@ -58,14 +80,16 @@ const LoginScreen = ({navigation}) => {
             onPress={() => navigation.navigate('OTPScreen')}>
             <Text style={styles.linkableText}>Forgot Password?</Text>
           </TouchableOpacity>
-
-          <CustomButton
-            title="Login"
-            color="#F17400"
-            paddingHorizontal={12}
-            marginVertical={30}
-            paddingVertical={15}
-          />
+          <TouchableOpacity onPress={onSubmit}>
+            <CustomButton
+              title="Login"
+              color="#F17400"
+              paddingHorizontal={12}
+              marginVertical={30}
+              paddingVertical={15}
+            />
+          </TouchableOpacity>
+          <Text style={styles.messageText}>{message}</Text>
         </View>
         <View style={styles.bottomtext}>
           <Text style={styles.normalText}>Don’t have an account?</Text>

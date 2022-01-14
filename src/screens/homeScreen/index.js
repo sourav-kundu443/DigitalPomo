@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Image, FlatList, TouchableOpacity} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './style';
 
 import SearchBar from '../../components/SearchBar';
@@ -21,6 +22,11 @@ const HomeScreen = ({navigation}) => {
         <Text style={styles.projectNum}>{item.text}</Text>
       </TouchableOpacity>
     );
+  };
+
+  const logout = async () => {
+    await AsyncStorage.removeItem('token');
+    navigation.navigate('LoginScreen');
   };
   return (
     <View style={styles.container}>
@@ -58,6 +64,9 @@ const HomeScreen = ({navigation}) => {
           numColumns={3}
           showsVerticalScrollIndicator={false}
         />
+        <TouchableOpacity onPress={logout}>
+          <Text>Logout</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

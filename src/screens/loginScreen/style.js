@@ -22,13 +22,13 @@ const styles = StyleSheet.create({
   },
   welcomeText: {
     color: '#fff',
-    fontSize: 24
+    fontSize: 24,
   },
   paraText: {
     color: '#fff',
     lineHeight: 25,
     marginTop: 15,
-    fontSize: 17
+    fontSize: 17,
   },
   formContainer: {
     position: 'absolute',
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 35,
     top: '28%',
     alignItems: 'center',
-    paddingHorizontal: '10%'
+    paddingHorizontal: '10%',
   },
   loginForm: {
     marginTop: '8%',
@@ -77,21 +77,26 @@ const styles = StyleSheet.create({
   },
   forgotPassword: {
     alignItems: 'flex-end',
-    marginTop: '5%'
+    marginTop: '5%',
   },
   linkableText: {
-      color: '#36A9E1',
-      fontWeight: '600',
-      fontSize: 16,
+    color: '#36A9E1',
+    fontWeight: '600',
+    fontSize: 16,
   },
   normalText: {
-      color: '#000',
-      marginRight: 5
+    color: '#000',
+    marginRight: 5,
   },
   bottomtext: {
-      flexDirection: 'row',
-      marginTop: '20%'
-  }
-})
+    flexDirection: 'row',
+    marginTop: '20%',
+  },
+  messageText: {
+    alignSelf: 'center',
+    color: 'red',
+    fontWeight: '600',
+  },
+});
 
 export default styles;
