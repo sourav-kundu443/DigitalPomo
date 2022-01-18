@@ -58,14 +58,18 @@ const HomeDashboard = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
-        <Header navigation={navigation} screenName="NewProject" color="#fff" />
+        <Header
+          navigation={navigation}
+          screenName="NewProject"
+          color="#fff"
+          middleText="Multi-storey Residential Building(G+12)"
+          fontSize={18}
+        />
         <View style={styles.imageContainer}>
           <Image source={Office} style={styles.image} />
         </View>
       </View>
       <View style={styles.bottomContainer}>
-        <Text style={styles.text}>Multi-storey Residential Building(G+12)</Text>
-
         <FlatList
           data={formatData(DATA, numColumns)}
           renderItem={renderItem}
