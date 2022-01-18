@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   middleText: {
+    alignSelf: 'center',
     color: '#fff',
     fontWeight: '700',
     letterSpacing: 1,

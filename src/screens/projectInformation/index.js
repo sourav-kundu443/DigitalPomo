@@ -27,6 +27,8 @@ const ProjectInfo = ({navigation}) => {
           navigation={navigation}
           screenName="HomeDashboard"
           color="#fff"
+          middleText="Projects Information"
+          fontSize={20}
         />
         <Image
           source={InformationImage}
@@ -35,7 +37,6 @@ const ProjectInfo = ({navigation}) => {
         />
       </View>
       <View style={styles.bottomContainer}>
-        <Text style={styles.footerTitle}>Projects Information</Text>
         <FlatList
           data={DATA}
           renderItem={renderItem}

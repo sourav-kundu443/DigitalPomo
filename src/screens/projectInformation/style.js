@@ -22,9 +22,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#fff',
     paddingHorizontal: '8%',
+    paddingTop: '5%',
   },
   image: {
-    width: WIDTH / 1.6,
+    width: WIDTH / 1.8,
     height: WIDTH / 2.1,
   },
   footerTitle: {
