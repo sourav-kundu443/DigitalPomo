@@ -19,19 +19,11 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 35,
     borderTopLeftRadius: 35,
     paddingHorizontal: '5%',
+    paddingVertical: '5%',
   },
   constructionImage: {
+    marginTop: '10%',
     alignSelf: 'center',
-  },
-
-  heading: {
-    fontSize: 24,
-    color: '#191919',
-    fontWeight: '700',
-    letterSpacing: 1,
-    lineHeight: 30,
-    marginVertical: '3%',
-    paddingHorizontal: '6%',
   },
   formField: {
     flexDirection: 'row',
