@@ -10,12 +10,17 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     width: '100%',
-    height: '40%',
+    height: '50%',
     alignItems: 'center',
+    // backgroundColor: 'red',
+  },
+  slider: {
+    height: '60%',
+    // backgroundColor: 'yellow',
   },
   bottomContainer: {
     width: '100%',
-    height: '60%',
+    height: '50%',
     backgroundColor: '#fff',
     alignItems: 'center',
     borderTopRightRadius: 35,

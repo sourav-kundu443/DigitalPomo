@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, createRef, useContext} from 'react';
 import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './style';
@@ -9,18 +9,14 @@ import CustomButton from '../../components/CustomButton';
 import Header from '../../components/Header';
 
 const LoginScreen = ({navigation}) => {
-  const [email, setEmail] = useState('sourav@gmail.com');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errortext, setErrortext] = useState('');
+
   const [secureTextEntry, setSecureTextEntry] = useState(true);
 
-  const onSubmit = async () => {
-    const emailValue = await AsyncStorage.getItem('token');
-    if (emailValue == email) {
-      navigation.navigate('HomeScreen');
-      setMessage('');
-    } else {
-      setMessage('Entered email is not valid.');
-    }
+  const onSubmit = () => {
+    navigation.navigate('VerificationScreen');
   };
 
   return (
@@ -88,7 +84,7 @@ const LoginScreen = ({navigation}) => {
               paddingVertical={15}
             />
           </TouchableOpacity>
-          <Text style={styles.messageText}>{message}</Text>
+          {/* <Text style={styles.messageText}>{message}</Text> */}
         </View>
         <View style={styles.bottomtext}>
           <Text style={styles.normalText}>Don’t have an account?</Text>

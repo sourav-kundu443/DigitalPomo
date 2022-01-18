@@ -1,5 +1,12 @@
-import React from 'react';
-import {View, Text, Image, FlatList, TouchableOpacity} from 'react-native';
+import React, {useContext} from 'react';
+import {
+  View,
+  Text,
+  Image,
+  FlatList,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './style';
 
@@ -24,10 +31,6 @@ const HomeScreen = ({navigation}) => {
     );
   };
 
-  const logout = async () => {
-    await AsyncStorage.removeItem('token');
-    navigation.navigate('LoginScreen');
-  };
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
@@ -35,6 +38,15 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.slider}>
           <Carousel />
         </View>
+
+        <SearchBar
+          placeholder="Search for project"
+          backgroundColor="#444444"
+          color="#fff"
+          borderColor="#444444"
+          placeholderTextColor="#8C8C8C"
+          style={styles.searchBar}
+        />
       </View>
       <View style={styles.bottomContainer}>
         <View style={styles.bottomContainerTop}>
@@ -50,13 +62,6 @@ const HomeScreen = ({navigation}) => {
               />
             </TouchableOpacity>
           </View>
-          <SearchBar
-            placeholder="Search for project"
-            backgroundColor="#e5e5e5"
-            color="#fff"
-            borderColor="#5F766B"
-            style={styles.searchBar}
-          />
         </View>
         <FlatList
           data={DATA}
@@ -64,9 +69,6 @@ const HomeScreen = ({navigation}) => {
           numColumns={3}
           showsVerticalScrollIndicator={false}
         />
-        <TouchableOpacity onPress={logout}>
-          <Text>Logout</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );

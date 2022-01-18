@@ -23,12 +23,12 @@ const CarouselItem = ({item}) => {
 const styles = StyleSheet.create({
   containerView: {
     width: WIDTH,
-    height: '80%',
+    height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
   cardView: {
-    width: WIDTH - 70,
+    width: WIDTH - 50,
     justifyContent: 'center',
     backgroundColor: '#fff',
     height: '70%',

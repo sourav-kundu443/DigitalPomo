@@ -25,7 +25,12 @@ const NewProject = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
-        <Header navigation={navigation} screenName="Home" color="#fff" />
+        <Header
+          navigation={navigation}
+          screenName="Home"
+          color="#fff"
+          middleText="Create new project"
+        />
         <Image
           source={NewProjectImage}
           resizeMode="contain"
@@ -33,7 +38,6 @@ const NewProject = ({navigation}) => {
         />
       </View>
       <View style={styles.bottomContainer}>
-        <Text style={styles.heading}>Create new project</Text>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View>
             <View style={styles.formField}>

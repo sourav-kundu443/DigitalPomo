@@ -17,6 +17,18 @@ const PhotosScreen = () => {
     <View style={styles.container}>
       <View style={styles.topContainer}>
         <Header middleText="Photos" color="#fff" />
+        <View style={styles.belowHeader}>
+          <View style={styles.belowHeaderLeft}>
+            <View style={styles.filters}>
+              <Text style={styles.filterText}>Filters</Text>
+              <View></View>
+              <View></View>
+            </View>
+          </View>
+          <View style={styles.belowHeaderRight}>
+            <View></View>
+          </View>
+        </View>
       </View>
       <View style={styles.bottomContainer}>
         <FlatList

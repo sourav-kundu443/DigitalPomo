@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import styles from './style';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Asyncstorage from '@react-native-async-storage/async-storage';
 import {
   SplashBackground,
   TransparentRectangle,
@@ -15,6 +16,12 @@ import {
 } from '../../assets/images';
 
 const SplashScreen = ({navigation}) => {
+  const onPressHandler = () => {
+    Asyncstorage.getItem('user_id').then(value =>
+      navigation.replace(value === null ? 'Auth' : 'Home'),
+    );
+  };
+
   return (
     <View style={styles.SplashContainer}>
       <View>
@@ -36,7 +43,7 @@ const SplashScreen = ({navigation}) => {
         </ImageBackground>
       </View>
       <View style={styles.splashLowerPart}>
-        <TouchableOpacity onPress={() => navigation.navigate('Auth')}>
+        <TouchableOpacity onPress={onPressHandler}>
           <View style={styles.getStarted}>
             <Text style={styles.getStartedText}>Get Started</Text>
             <Icon

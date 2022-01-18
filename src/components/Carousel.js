@@ -29,6 +29,7 @@ const Carousel = () => {
         renderItem={({item}) => {
           return <CarouselItem item={item} />;
         }}
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   );

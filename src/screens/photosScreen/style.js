@@ -11,12 +11,19 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     width: '100%',
-    height: '30%',
-    alignItems: 'center',
+    height: '40%',
+    // alignItems: 'center',
   },
+  filterText: {
+    color: '#D8D8D8',
+    fontSize: 16,
+    fontWeight: '500',
+    lineHeight: 20,
+  },
+
   bottomContainer: {
     width: '100%',
-    height: '70%',
+    height: '60%',
     alignItems: 'center',
     borderTopRightRadius: 35,
     borderTopLeftRadius: 35,

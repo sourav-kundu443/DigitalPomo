@@ -67,12 +67,18 @@ const styles = StyleSheet.create({
     width: '100%',
     paddingRight: 50,
     paddingLeft: 10,
-    fontSize: 18,
+    fontSize: 16,
     color: '#000',
   },
   icon: {
     position: 'absolute',
     left: '90%',
+  },
+  errorText: {
+    color: 'red',
+    alignSelf: 'center',
+    fontSize: 16,
+    marginTop: 5,
   },
 });
 

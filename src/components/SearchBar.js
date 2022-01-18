@@ -39,8 +39,9 @@ const styles = StyleSheet.create({
   SearchBar: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: 10,
+    borderRadius: 5,
     paddingHorizontal: '5%',
+    marginHorizontal: '10%',
   },
   textInput: {
     width: '100%',
